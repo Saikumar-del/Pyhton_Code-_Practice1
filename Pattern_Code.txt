@@ -1,0 +1,296 @@
+1#@Write a code for print Only odd numbers?
+
+for i in range(11):
+    if i%2!=0:
+        print(i)
+
+2#@Write a code for to print sum of the nums in present in the list
+
+list=eval(input('Enter any Num: ')
+sum=0
+for x in list:
+	sum=sum+x
+print(sum)
+
+3#@Write code for print the first two numbers use while
+x=1
+while x<=10:
+    print(x)
+    x=x+1
+
+4# @reverse the given String 
+s=input('Enter Any String: ')
+i=len(s)-1
+target=''
+while i>=2:
+    target=target+s[i]
+    i-=1
+print(target)
+
+
+5#@Write Program For Reversed Order of words
+
+s = input('enter string: ')
+l=s.split()
+l1=[]
+i=len(l)-1
+while i>=0:
+    l1.append(l[i])
+    i-=1
+print(l1)
+
+
+6#@Write code for Reverse string in Same Place
+
+s = input('enter string: ')														s = input('enter string')
+l=s.split()																	l = s.split()
+l1=[]											(or)							rw = [x[::-1] for x in l]
+for x in l:																	out="".join(rw)
+   l1.append(x[::-1])															print(out)
+print(l1)
+
+
+ 
+
+7#@ Write code for Reverse internal content of the string (in same place)
+
+s = input('enter string: ')
+l=s.split()
+l1=[]
+for x in l:
+    l1.append(x[::-1])
+output=' '.join(l1)
+print(output)
+print(l1)
+
+
+8#@ Write code for even and odd char
+
+s=input('Enter Any String: ')
+i=0
+while i<len(s):
+    print(s[i], end=' ')
+    i+=2
+print()
+i=1
+while i<len(s):
+    print(s[i], end=' ')
+    i+=2
+
+9#@ Write code for even and odd char
+
+s=input('Enter Any String: ')
+even=[]
+odd=[]
+i=0
+while i<len(s):
+    if i%2 == 0:
+        even.append(s[i])
+    else:
+        odd.append(s[i])
+    i+=1
+    print(even)
+    print(odd)
+
+10#@ write a program to merge two char in a single string?
+
+s1=input('Enter first str: ') 															
+s2=input('Enter second str: ')																					
+output=''																										
+i,j=0,0																														
+while i<len(s1) or j<len(s2):																						
+    if i<len(s1):																							
+        output=output+s1[i]																						
+        i+=1																															
+    if j<len(s2):	
+        output=output+s2[j]
+        j+=1
+    
+print(output)
+
+																					or
+
+i='sai'
+j='abc'
+s1,s2=0,0
+output=''
+while s1<len(i) or s2<len(j):
+    output=output+i[s1]+j[s2]
+    s1+=1
+    s2+=1
+print(output)
+
+11#@ write a program for seperate the alpa & Num?
+
+s=input('Enter the str: ')
+s1=s2=''
+
+for x in s:
+    if x.isalpha():
+        s1+=x
+    else:
+        s2+=x
+
+print(sorted(s1))   #sort is given the string in List position
+print(s2)
+
+12#@Write a code for sum of first n num
+
+n = int(input("Enter List:"))
+sum=0
+i=1
+while i<=n:
+    sum+=i
+    i+=1
+print('The sum of first',n,'Number is:',sum)
+
+13#@ Write code for seperate alphabits and numbers
+
+s=input('enter any: ')
+s1=s2=''
+for x in s:
+    if x.isalpha():
+        s1+=x
+    else:
+        s2+=x
+
+print(s1)
+print(s2)
+
+14#@ Write code for gien the targer from list
+
+nums = [1,2,3,4,5,5,6,7,8,9]
+target=int(input("Enter the target: "))
+for i in range(len(nums)):
+    for j in range(i+1, len(nums)):
+        summetion = nums[i]+nums[j]
+        if summetion == target:
+            print(nums[i],nums[j])
+
+15#@ Write code for Right angele triangle
+
+n=int(input("enter no of rows: "))
+
+ for i in range(1, n+1):
+     for j in range(1,i+1):
+         print('*',end='')
+    print()
+
+           (or)
+
+for i in range(1,n+1):
+    print('*'*i)
+
+16#@Write code for to print repeated char 
+
+str="google"
+output = {i:str.count(i) for i in str}
+print(output)
+
+
+17#@Write  code for STR AFTER STR BASAED ON NUM?
+
+s=input('Enter any Str: ')
+output=''
+for x in s:
+    if x.isalpha():
+        ch=x
+        output=output+ch
+    else:
+        newch=chr(ord(ch)+int(x))
+        output=output+newch
+print(output)
+
+18#@Write the code for to REMOVE THE DUPLICATE CHE IN THE GIVEN STR:
+
+s=input('Enter any Str: ')
+output=''
+for x in s:
+    if x.isalpha():
+        ch=x
+        output=output+ch
+    else:
+        newch=chr(ord(ch)+int(x))
+        output=output+newch
+print(output)
+
+19@#Write code for count the repeated Chr in the given str
+
+s=input('Enter str: ')
+d={}
+for x in s:
+    if x not in d:
+        d[x]=1
+    else:
+        d[x]+=1
+print(d)
+
+for k,v in d.items():
+    print('{}={}'.format(k,v))
+
+20@#Write code for list in index Format
+
+l=[10,20,30,40,50,60,70,80,90]
+i=0
+
+for x in l:
+    if i<len(l):
+        print('positive index {}: negitive index {}:={}'.format(i,i-len(l),l[i]))
+        i+=1
+print(i)
+
+
+21@# Write code for remove all the elements form the list
+
+
+l=[10,20,30,40,10,10,20,10,50]
+x=int(input())
+while True:
+	if x in l:
+		l.remove(x)
+	else:
+		break
+print(l)
+
+22@#Write code for  Enter the student marks in Dict?
+
+d={}
+
+while True:
+	name=input('Enter the std name: )
+	marks=int(input('Enter the marks: )
+	d[name]=marks
+	if option = input('Enter if you want to inseted of one more student records[Yes|no]: '):
+		option.lower()=='no':
+			break
+print(d)
+
+23@#Write code for Factorial of  given numbers?
+
+def factorial():
+	if n==0:
+		result=1
+	else:
+		result=n*factorial(n-1)
+	return result
+print(factorial(7))
+	
+
+24@#Write code for length of str?
+
+def length_str(inp):
+    count=0
+    for x in inp:
+        count+=1
+    return count
+length=length_str(input('Enter str: '))
+print(length)
+
+25@# Write code for list matrix?
+
+n=[[10,20,30],[40,50,60],[70,80,90]]
+
+for i in range(len(n)):
+    for j in range(len(n[i])):
+        print(n[i][j],end=' ')
+    print()
