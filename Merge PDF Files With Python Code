@@ -1,0 +1,22 @@
+#Merge PDF files with Python Code
+
+from pdfrw import PdfReader, PdfWriter, PageMerge
+def watermarker(path, watermark_path, output_path):
+    base_pdf = PdfReader(path)
+    watermark_pdf = PdfReader(watermark_path)
+    mark = watermark_pdf.pages[0]
+
+    for page in range(len(base_pdf.pages)):
+        merger = PageMerge(base_pdf.pages[page])
+        merger.add(mark).render()
+
+    writer = PdfWriter()
+    writer.write(output_path, base_pdf)
+
+if __name__ == '__main__':
+    # Provide the correct paths for your input PDF, watermark PDF, and output PDF
+    input_pdf_path = r'C:\Users\Sai Kumar\OneDrive\Documents\susmita cv.pdf'
+    watermark_path = r'C:\Users\Sai Kumar\OneDrive\Documents\susmita cv.pdf'
+    output_pdf_path = r'C:\Users\Sai Kumar\OneDrive\Documents\susmita cv.pdf'
+
+    watermarker(input_pdf_path, watermark_path, output_pdf_path)
